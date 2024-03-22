@@ -2,6 +2,7 @@ package com.aditya.xauth.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,11 +16,15 @@ import java.util.List;
  * @author adityagupta
  * @date 21/03/24
  */
+/**
+ * This class represents the user object of user object
+ */
 @Entity
 @Table(name = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class User implements UserDetails {
 
     @Id
